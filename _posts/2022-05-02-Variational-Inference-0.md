@@ -61,8 +61,8 @@ Using Jensen's inequality and the fact that the $$\log$$ function is convex, we 
 $$\begin{align*}
 \log p(\mathbf{X}) & = \log \int_{\mathcal{Z}^N} p(\mathbf{X}, \mathbf{Z}) d\mathbf{Z} \\
 & = \log \int_{\mathcal{Z}^N} q_{\boldsymbol{\nu}}(\mathbf{Z}) \frac{p(\mathbf{X}, \mathbf{Z})}{q_{\boldsymbol{\nu}}(\mathbf{Z})} d\mathbf{Z} \\
-& = \log \mathbb{E}_{q_{\boldsymbol{\nu}}(\mathbf{Z})} \bigg[ \frac{p(\mathbf{X}, \mathbf{Z})}{q_{\boldsymbol{\nu}}(\mathbf{Z})} \bigg] \\
-& \geq \mathbb{E}_{q_{\boldsymbol{\nu}}(\mathbf{Z})} \bigg[\log \frac{p(\mathbf{X}, \mathbf{Z})}{q_{\boldsymbol{\nu}}(\mathbf{Z})} \bigg] \\
+& = \log \mathbb{E}_{q_{\boldsymbol{\nu}}} \bigg[ \frac{p(\mathbf{X}, \mathbf{Z})}{q_{\boldsymbol{\nu}}(\mathbf{Z})} \bigg] \\
+& \geq \mathbb{E}_{q_{\boldsymbol{\nu}}} \bigg[\log \frac{p(\mathbf{X}, \mathbf{Z})}{q_{\boldsymbol{\nu}}(\mathbf{Z})} \bigg] \\
 & =: \mathcal{L}(q_{\boldsymbol{\nu}}, p ; \mathbf{X})
 \end{align*}$$
 
@@ -73,11 +73,11 @@ where this last term is the Evidence Lower Bound (ELBO). Notice it is a *lower b
 Finally, we may now look at how the ELBO and the KL divergence are related:
 
 $$\begin{align*}
-D_{KL}(q_{\boldsymbol{\nu}}(\mathbf{Z}) \mid\mid p(\mathbf{Z} \mid \mathbf{X})) & = \mathbb{E}_{q_{\boldsymbol{\nu}}(\mathbf{Z})} \bigg[ \log \frac{q_{\boldsymbol{\nu}}(\mathbf{Z})}{p(\mathbf{Z} \mid \mathbf{X})} \bigg] \\
-& = \mathbb{E}_{q_{\boldsymbol{\nu}}(\mathbf{Z})} [ \log q_{\boldsymbol{\nu}}(\mathbf{Z}) - \log p(\mathbf{Z} \mid \mathbf{X})] \\
-& = \mathbb{E}_{q_{\boldsymbol{\nu}}(\mathbf{Z})} [ \log q_{\boldsymbol{\nu}}(\mathbf{Z})- \log \frac{p(\mathbf{Z}, \mathbf{X})}{p(\mathbf{X})} \bigg] \\
-& = \mathbb{E}_{q_{\boldsymbol{\nu}}(\mathbf{Z})} [ \log q_{\boldsymbol{\nu}}(\mathbf{Z}) - \log p(\mathbf{Z}, \mathbf{X})] + p(\mathbf{X}) \\
-& = - \mathbb{E}_{q_{\boldsymbol{\nu}}(\mathbf{Z})} \bigg[\log \frac{p(\mathbf{X}, \mathbf{Z})}{q_{\boldsymbol{\nu}}(\mathbf{Z})} \bigg] + p(\mathbf{X}) \\
+D_{KL}(q_{\boldsymbol{\nu}}(\mathbf{Z}) \mid\mid p(\mathbf{Z} \mid \mathbf{X})) & = \mathbb{E}_{q_{\boldsymbol{\nu}}} \bigg[ \log \frac{q_{\boldsymbol{\nu}}(\mathbf{Z})}{p(\mathbf{Z} \mid \mathbf{X})} \bigg] \\
+& = \mathbb{E}_{q_{\boldsymbol{\nu}}} [ \log q_{\boldsymbol{\nu}}(\mathbf{Z}) - \log p(\mathbf{Z} \mid \mathbf{X})] \\
+& = \mathbb{E}_{q_{\boldsymbol{\nu}}} [ \log q_{\boldsymbol{\nu}}(\mathbf{Z})- \log \frac{p(\mathbf{Z}, \mathbf{X})}{p(\mathbf{X})} \bigg] \\
+& = \mathbb{E}_{q_{\boldsymbol{\nu}}} [ \log q_{\boldsymbol{\nu}}(\mathbf{Z}) - \log p(\mathbf{Z}, \mathbf{X})] + p(\mathbf{X}) \\
+& = - \mathbb{E}_{q_{\boldsymbol{\nu}}} \bigg[\log \frac{p(\mathbf{X}, \mathbf{Z})}{q_{\boldsymbol{\nu}}(\mathbf{Z})} \bigg] + p(\mathbf{X}) \\
 & = - \mathcal{L}(q_{\boldsymbol{\nu}}, p ; \mathbf{X}) + p(\mathbf{X})
 \end{align*}$$
 
