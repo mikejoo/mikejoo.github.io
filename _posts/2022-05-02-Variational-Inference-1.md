@@ -75,7 +75,7 @@ $$ \log p(\mathbf{X}) =  \log \prod_{i=1}^{N} p(\mathbf{x}_i) = \sum_{i=1}^{N} \
 
 By reducing a Bayesian inference problem into an optimization problem, variational inference opens the door to applying Bayesian inference on high-dimensional problems that are becoming the norm today. A few examples, which I will discuss in other posts, include Bayesian deep learning and variational autoencoders.
 
-## Acknowledgement and Recommended Reading
+### Acknowledgement and Recommended Reading
 
 This post uses the following materials for reference:
 
