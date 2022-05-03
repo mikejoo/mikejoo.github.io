@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Variational Inference and the Evidence Lower Bound (ELBO)
-categories: [Bayesian, Variational Inference, VAE, Information Theory]
+categories: [Bayesian Inference, Variational Inference, VAE, Information Theory]
 ---
 
 In this post, I provide a brief introduction to variational inference and the evidence lower bound.
