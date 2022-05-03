@@ -4,6 +4,8 @@ title: Variational Inference and the Evidence Lower Bound (ELBO)
 categories: [Bayesian, Variational Inference, VAE, Information Theory]
 ---
 
+In this post, I provide a brief introduction to variational inference and the evidence lower bound.
+
 # Problem
 
 Bayesian inference requires computing the posterior distribution of a random variable, given a set of observations. In the usual latent variable model setting with observed data: $$\mathbf{X} = \{ \mathbf{x}_i\}_{i=1}^{N}$$
