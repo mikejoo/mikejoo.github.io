@@ -1,1 +1,1 @@
-https://mikejoo.github.io
+https://mikejoo.github.io/index.html
