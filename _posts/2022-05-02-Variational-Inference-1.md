@@ -38,7 +38,7 @@ Here, we generally treat $$p$$ as the true distribution and $$q$$ as our approxi
 
 $$ D_{KL}(q(x) \mid\mid p(x)) = \mathbb{E}_{q} \bigg[ \log q(x) - \log p(x) \bigg] $$
 
-In other words, with expectation taken with respect to $$x \sim q$$, the KL divergence is the difference between the log likelihoods of $x$ taken with $$q$$ and $$p$$. Broadly speaking, if $$p$$ and $$q$$ are similar, the KL divergence would be small. In particular, the reverse KL divergence rewards "mode-seeking" behavior; if the mode of $$q$$ is near the mode of $$p$$, then the reverse KL divergence is small. 
+In other words, with expectation taken with respect to $$x \sim q$$, the KL divergence is the difference between the log likelihoods of $$x$$ taken with $$q$$ and $$p$$. Broadly speaking, if $$p$$ and $$q$$ are similar, the KL divergence would be small. In particular, the reverse KL divergence rewards "mode-seeking" behavior; if the mode of $$q$$ is near the mode of $$p$$, then the reverse KL divergence is small. 
 
 With the KL divergence, we have a measure of how different $$q_{\boldsymbol{\nu}}(\mathbf{Z})$$ and $$p(\mathbf{Z} \mid \mathbf{X})$$ are. Then, how do we actually optimize $$\boldsymbol{\nu}$$ such that $$D_{KL}(q_{\boldsymbol{\nu}}(\mathbf{Z}) \mid\mid p(\mathbf{Z} \mid \mathbf{X}))$$ is minimized? 
 
