@@ -30,7 +30,9 @@ This has often been the bottleneck in (full) Bayesian approaches to statistical 
 
 I'll discuss the Kullback-Leibler (KL) divergence in depth in another post, but for now, let us simply look at its definition:
 
-> *Definition*: The (reverse) ***KL divergence*** between two distributions $$p(x)$$ and $$q(x)$$ is given as: $$ D_{KL}(q(x) \mid\mid p(x)) = \mathbb{E}_{q} \bigg[ \log \frac{q(x)}{p(x)} \bigg] $$ 
+*Definition*: The (reverse) ***KL divergence*** between two distributions $$p(x)$$ and $$q(x)$$ is given as:
+
+$$ D_{KL}(q(x) \mid\mid p(x)) = \mathbb{E}_{q} \bigg[ \log \frac{q(x)}{p(x)} \bigg] $$ 
 
 Here, we generally treat $$p$$ as the true distribution and $$q$$ as our approximation to $$p$$. Then, observe:
 
@@ -48,7 +50,9 @@ Unfortunately, directly optimizing $$\boldsymbol{\nu}$$ with respect to minimizi
 
 Again, I'll discuss Jensen's inequality in a measure-theoretic setting for probability distributions in another post. For now, let's simply use Jensen's inequality:
 
-> *Lemma*: For $$f: \mathcal{X} \to \mathbb{R}$$ a convex function and $$X \in \mathcal{X}$$ a random variable, we have: $$ \mathbb{E}[f(X)] \leq f(\mathbb{E}[X]) $$
+*Lemma*: For $$f: \mathcal{X} \to \mathbb{R}$$ a convex function and $$X \in \mathcal{X}$$ a random variable, we have: 
+
+$$ \mathbb{E}[f(X)] \leq f(\mathbb{E}[X]) $$
 
 ### ELBO
 
